@@ -98,3 +98,24 @@ f9b73ae3b1fd0b9f stream      0      ...                0 /tmp/mysql.sock
 f9b73ae3b1fd0177 stream      0      ...                0 /tmp/mysqlx.sock
 ```
 If not, modify file "./server/controllers/userController" line 9. replace the socketPath with yours 
+
+
+# Start testing
+Start Server
+```
+npm start
+```
+
+Go to localhost in web browser http://localhost:5500/
+
+Function
+* Home page show the list of product
+* add product 
+* view product
+* Edit(update) product
+* Delete product
+
+
+## Future Plan
+* Add checking before input to DB
+* Deply on real web server
