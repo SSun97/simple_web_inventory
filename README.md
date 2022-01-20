@@ -42,7 +42,7 @@ Input command and create database named "inventory"
 ```
 mysql> CREATE DATABASE inventory; 
 ```
-!!!Very Important!!! for MySQL version 6.0+ the 2 commands below need to be run one time.
+!!!Very Important!!! for MySQL version 6.0+ if you have issue connecting to DB server the 2 commands below need to be run one time.
 password is mySQL login credential, single quote mark ('')need to be added around the password. 
 ```
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
@@ -59,7 +59,7 @@ Bye
 ```
 Run Script to create table "product" in database "inventory"
 ```
-mysql -uroot -p inventory < setup_database.sq
+mysql -uroot -p inventory < setup_database.sql
 ```
 Run Script to instert some data for testing
 ```
