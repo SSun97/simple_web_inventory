@@ -1,3 +1,26 @@
+# This is a project about Inventory Management, a web application
+
+## Installation
+
+### Install Node.js
+https://nodejs.org/en/download/
+Verify installation
+```
+node -v
+v14.17.6
+```
+## Install MySQL
+for MacOS:
+```
+brew install mysql
+```
+for Windows10:
+https://dev.mysql.com/downloads/installer/
+
+
+
+
+
 mysql -uroot -p inventory < setup_database.sq
 mysql -uroot -p inventory < insert_data.sql 
 
