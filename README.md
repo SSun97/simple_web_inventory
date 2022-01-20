@@ -1,10 +1,11 @@
 # This is a project about Inventory Management, a web application
 
 ## Installation
+This project had been test on MacOS 12.1. Testing on Windows will be proceed if required.
 
 ### Install Node.js
 https://nodejs.org/en/download/
-Verify installation
+* Verify installation
 ```
 node -v
 v14.17.6
@@ -14,8 +15,6 @@ for MacOS:
 ```
 brew install mysql
 ```
-for Windows10:
-https://dev.mysql.com/downloads/installer/
 
 
 
