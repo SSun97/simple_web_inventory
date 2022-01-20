@@ -7,19 +7,41 @@ This project had been test on MacOS 12.1. Testing on Windows will be proceed if 
 https://nodejs.org/en/download/
 * Verify installation
 ```
-node -v
+$ node -v
 v14.17.6
 ```
-## Install MySQL
-for MacOS:
+## Install MySQL(Kepp the password for later use)
 ```
 brew install mysql
 ```
+* Verify installation
+```
+$ mysql --version
+mysql  Ver 8.0.27 for macos12.0 on arm64 (Homebrew)
+```
+## Install install dev dependencies(need to install npm if it's not avilable in the environment)
+```
+npm install
+```
 
-
-
-
-
+## Setup MySql
+Running Mysql server
+```
+$ mysql.server start
+Starting MySQL
+ SUCCESS! 
+```
+login to MySQL server(Need to input password)
+```
+% mysql -uroot -p
+Enter password:
+...
+mysql> 
+```
+Input command and create database named "inventory" 
+```
+mysql> CREATE DATABASE inventory; 
+```
 mysql -uroot -p inventory < setup_database.sq
 mysql -uroot -p inventory < insert_data.sql 
 
