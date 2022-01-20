@@ -43,7 +43,7 @@ Input command and create database named "inventory"
 mysql> CREATE DATABASE inventory; 
 ```
 !!!Very Important!!! for MySQL version 6.0+ the 2 commands below need to be run one time.
-<password> is mySQL login credential, single quote mark ('')need to be added around the password. 
+password is mySQL login credential, single quote mark ('')need to be added around the password. 
 ```
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
 Query OK, 0 rows affected (0.01 sec)
@@ -65,15 +65,36 @@ Run Script to instert some data for testing
 ```
 mysql -uroot -p inventory < insert_data.sql 
 ```
+After setting up
+```
+mysql> select * from product;
++----+---------------------+-------------------+--------+------------+------------------+--------+
+| id | Item                | SKU               | Amount | Features   | Notes            | status |
++----+---------------------+-------------------+--------+------------+------------------+--------+
+|  1 | Men T-shirt         | SKU76453210       |     21 | Design     | short lead timee | active |
+|  2 | Women T-shirt       | SKU76453211       |     85 | Iron Free  | Long lead time   | active |
+|  3 | Men Polo            | SKU76453212       |     43 | Iron Free  | short lead time  | active |
+|  4 | Women Polo          | SKU76453213       |     27 | Iron Free  | Long lead time   | active |
+|  5 | Headset             | SKU89012345       |     23 | ABC        | Sales            | active |
+| 13 | Microphone logitech | SKU89012345111223 |     56 | 15 buttons | Hot product      | active |
++----+---------------------+-------------------+--------+------------+------------------+--------+
+6 rows in set (0.00 sec)
+```
 
+## Modify credential file
+In file ".env", line 4
+```
+DB_PASS = 'your_password'
+```
 
-ssun@Simons-Mac-mini simple_web_inventory % netstat -ln | grep mysql
+## Modify socketPath if needed
+run command
+```
+% netstat -ln | grep mysql
+```
+see the result, if your result od mysql.sock directory is the same as bellow "/tmp/", NO NEED to further modify.
+```
 f9b73ae3b1fd0b9f stream      0      0 f9b73ad54d31dc27                0                0                0 /tmp/mysql.sock
 f9b73ae3b1fd0177 stream      0      0 f9b73ad54cf1cc27                0                0                0 /tmp/mysqlx.sock
-
-
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '7bvfqcQc!@#';
-Query OK, 0 rows affected (0.01 sec)
-
-mysql> flush privileges;
-Query OK, 0 rows affected (0.02 sec)
+```
+If not, modify file "./server/controllers/userController" line 9. replace the socketPath with yours 
