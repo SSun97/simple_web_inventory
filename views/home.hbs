@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-6"><h1>Products</h1></div>
+    <div class="col-6 d-flex justify-content-end">
+        <a href="/addproduct" type="button" class="btn btn-primary align-self-center">+ add product</a>
+    </div>
+</div>
+
+
+
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">SKU</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Features</th>
+      <th scope="col">Notes</th>
+      <th scope="col" class="text-end">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.Item}}</td>
+      <td>{{this.SKU}}</td>
+      <td>{{this.Amount}}</td>
+      <td>{{this.Features}}</td>
+      <td>{{this.Notes}}</td>
+      <td class="text-end">
+          <a href="/viewproduct/{{this.id}}" type="button" class="btn btn-light btn-samll"><i class="bi bi-eye"></i> View</a>
+          <a href="/editproduct/{{this.id}}" type="button" class="btn btn-light btn-samll"><i class="bi bi-pencil"></i> Edit</a>
+          <a href="/{{this.id}}" type="button" class="btn btn-light btn-samll"><i class="bi bi-person-x"></i> Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
