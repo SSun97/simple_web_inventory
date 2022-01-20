@@ -94,7 +94,7 @@ run command
 ```
 see the result, if your result od mysql.sock directory is the same as bellow "/tmp/", NO NEED to further modify.
 ```
-f9b73ae3b1fd0b9f stream      0      0 f9b73ad54d31dc27                0                0                0 /tmp/mysql.sock
-f9b73ae3b1fd0177 stream      0      0 f9b73ad54cf1cc27                0                0                0 /tmp/mysqlx.sock
+f9b73ae3b1fd0b9f stream      0      ...                0 /tmp/mysql.sock
+f9b73ae3b1fd0177 stream      0      ...                0 /tmp/mysqlx.sock
 ```
 If not, modify file "./server/controllers/userController" line 9. replace the socketPath with yours 
