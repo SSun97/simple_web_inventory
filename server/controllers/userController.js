@@ -131,15 +131,16 @@ exports.update = (req, res) => {
 // Delete product
 exports.delete = (req, res) => {
     pool.getConnection((err, connection) => {
-        if(err) throw err; // not connected
-        console.log('Connected as ID ' + connection.threadId);
+        // if(err) throw err; // not connected
+        // console.log('Connected as ID ' + connection.threadId);
         //User the connecion
         connection.query('DELETE FROM product WHERE id = ?', [req.params.id], (err, rows) => {
             // // when done with the connection, release it
             connection.release();
             if(!err) {
-                let removedProduct = encodeURIComponent('Product successfully removed!');
-                res.redirect('/?removed=' + removedProduct);
+                // let removedProduct = encodeURIComponent('Product successfully removed!');
+                // res.redirect('/?removed=' + removedProduct);
+                res.redirect('/');
             } else {
                 console.log(err);
             }
