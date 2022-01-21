@@ -116,7 +116,7 @@ Function
 * view product
 ![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/view_product.png?raw=true)
 * Edit(update) product
-![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/edit_products.png?raw=true)
+![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/edit_product.png?raw=true)
 * Delete product
 Botton avilable on main page
 
