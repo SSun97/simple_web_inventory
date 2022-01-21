@@ -110,12 +110,15 @@ Go to localhost in web browser http://localhost:5500/
 
 Function
 * Home page show the list of product
-![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/list_of_products?raw=true)
-* add product 
+![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/list_of_products.png?raw=true)
+* add product
+![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/add_product.png?raw=true) 
 * view product
+![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/view_product.png?raw=true)
 * Edit(update) product
+![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/edit_products.png?raw=true)
 * Delete product
-
+Botton avilable on main page
 
 ## Future Plan
 * Add checking before input to DB
