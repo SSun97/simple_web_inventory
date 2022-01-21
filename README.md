@@ -110,7 +110,7 @@ Go to localhost in web browser http://localhost:5500/
 
 Function
 * Home page show the list of product
-![Screenshot](relative/list_of_products?raw=true)
+![alt text](https://github.com/ssun97/simple_web_inventory/blob/main/list_of_products?raw=true)
 * add product 
 * view product
 * Edit(update) product
